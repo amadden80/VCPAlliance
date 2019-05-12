@@ -358,7 +358,7 @@
     <style>
       * {
         box-sizing: border-box;
-        font-family: adelle;
+        font-family:  adelle, serif;
         text-align: center;
       }
 
@@ -441,6 +441,8 @@
         font-weight: 600;
         text-align: center;
         line-height: 1.5em;
+        margin:0;
+        margin-top:0.75em;
       }
 
       #welcome .large {
@@ -452,6 +454,7 @@
       }
 
       #welcome .small-and {
+        font-family: adelle, serif;
         font-size: 1.5em;
         font-style: italic;
         max-width: 900px;
@@ -775,7 +778,7 @@
                 </p>
                 <div class="calendar-link-stage">
                   <div>View our Summer 2019</div>
-                  <div>program calendar</div>
+                  <div>Program Calendar</div>
                 </div>
             </div>
 
@@ -849,9 +852,9 @@
             <div>Beginnings Picnic before the</div>
             <div>New York Philharmonic Concert.</div>
         </div>
-        <div class="link-stage">
+        <a class="link-stage" href="https://www.eventbrite.com/e/new-beginnings-picnic-tickets-59999990587" target="_blank">
           More Info Here
-        </div>
+        </a>
       </div>
 
       <div class="stage flex" id="programming">
@@ -913,18 +916,18 @@
       <script>
         var loaded = false;
 
-        var nextTextTransitionTime;
+        var nextTextTransitionTime = Date.now() + 7000;
         function delayTransition () {
-            nextTextTransitionTime = Date.now() + 5000;
+            nextTextTransitionTime = Date.now() + 15000;
         }
-        delayTransition();
-
+        
         var welcomeDisplayIdx = 0;
         function displayNextWelcomeText(idxChange){
             var carouselItems = window.document.getElementsByClassName("carousel-item");
             if(!carouselItems)
                 return;
             welcomeDisplayIdx = (welcomeDisplayIdx+(idxChange || 1))%(carouselItems.length);
+            welcomeDisplayIdx = welcomeDisplayIdx < 0 ? 1 : welcomeDisplayIdx;
             for(var idx=0; idx<carouselItems.length; idx++) {
                 if(idx==welcomeDisplayIdx) {
                     carouselItems[idx].style.opacity=1;
@@ -1029,8 +1032,8 @@
 
             setInterval(function(){
                 if( Date.now() > nextTextTransitionTime ) {
-                    displayNextWelcomeText()
-                    delayTransition();
+                  delayTransition();
+                  displayNextWelcomeText()
                 }
             }, 500);
 

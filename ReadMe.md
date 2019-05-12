@@ -1,1 +1,1 @@
-https://vancortlandt.org + https://vcpark.org = https://VancortlandtParkAlliance.org
+https://Vancortlandt.org + https://VCPark.org = https://VancortlandtParkAlliance.org
