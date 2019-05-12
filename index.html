@@ -369,13 +369,13 @@
         color: inherit;
       }
 
-      .alliance {
+      /* .alliance {
         z-index: 100;
         position: absolute;
         top: 0;
         left: 0;
         width: 100vw;
-      }
+      } */
 
       .smaller-title .event-title {
         font-size: 1em;
@@ -422,7 +422,7 @@
       #welcome .carousel {
         position: relative;
       }
-
+      
       #welcome .floating-text {
         opacity: 1;
         -webkit-transition: opacity 2s; 
@@ -431,6 +431,21 @@
         width: 100%;
         z-index:100000;
       }
+
+      @media only screen and (max-width: 1280px) {
+        #welcome .floating-text {
+          opacity: 1 !important;
+          -webkit-transition: opacity 2s; 
+          transition: opacity 2s;
+          position: relative;
+          width: 100%;
+          z-index:100000;
+        }
+        #welcome .floating-text {
+          font-size: 0.65em;
+        }
+      }
+      
 
       #welcome .static-text {
         opacity: 0;
@@ -499,6 +514,12 @@
         width: 390px;
       }
 
+      @media only screen and (max-width: 1280px) {
+        #welcome .logo {
+          width: 250px;
+        }
+      }
+
       /* #welcome .hidden {
           display:none;
       } */
@@ -536,6 +557,21 @@
         -webkit-animation: linear 8s fadeInDelayed; 
         animation: linear 8s fadeInDelayed;
         cursor: pointer;
+      }
+
+      @media only screen and (max-width: 1280px) {
+        #welcome .right {
+          display: none;
+        }
+        #welcome .left {
+          display: none;
+        }
+        #welcome .large {
+          display: none;
+        }
+        #welcome .small {
+          display: none;
+        }
       }
 
       #previous-experiences {
@@ -703,6 +739,7 @@
         flex-direction: row;
         background: #00B388;
         color: white;
+        font-size: 0.65em;
       }
 
       #mission-statement-board-of-directors .dots {
@@ -835,10 +872,10 @@
 
           <a class="link-stage" href="https://vcpark.org/home" target="_blank">
             Go to Van Cortlandt Park Conservancy Website
+          </a>
           </div>
         </div>
       </div>
-
       <div class="stage flex" id="featured-event">
         <img
           class="logo"
