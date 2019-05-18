@@ -372,6 +372,10 @@
         color: inherit;
       }
 
+      html, body{
+       height:100%;
+      }
+
       /* .alliance {
         z-index: 100;
         position: absolute;
@@ -693,12 +697,15 @@
         font-size: 2.75em;
       }
 
-      
+      @media only all and (min-width: 1279px) {
+        #programming #programming-list {
+          max-height: 700px;
+        }
+      }
       #programming #programming-list {
         flex-wrap: wrap;
         margin: 0;
-        padding: 0;
-        /* max-height: 700px; */
+        padding: 0;        
         justify-content: unset;
       }
 
@@ -819,7 +826,12 @@
         max-width: 400px;
         min-width: 250px;
         word-wrap: normal;
-        white-space: pre-wrap;
+      }
+
+      @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+        #the-mission-statement {
+          white-space: pre-wrap;
+        }
       }
 
       #the-mission-statement {
@@ -991,9 +1003,9 @@
           </div>
           <div class="flex">
             <p id="the-mission-statement">
-              The Van Cortlandt Park Alliance preserves, supports, and promotes
-              the recreational, ecological and historical value of Van Cortlandt
-              Park.
+The Van Cortlandt Park Alliance preserves, supports, and promotes
+the recreational, ecological and historical value of Van Cortlandt
+Park.
             </p>
           </div>
         </div>
