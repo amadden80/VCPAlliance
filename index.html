@@ -652,6 +652,7 @@
       #featured-event .title {
         font-weight: 600;
         font-size: 2.75em;
+        margin-bottom: 0.25em;
       }
 
       @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
@@ -969,30 +970,22 @@
           </div>
         </div>
       </div>
-      <!-- <div class="stage flex" id="featured-event">
-        <img
-          class="logo"
-          src="data:image/png;base64,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"
-          alt="Van Cortlandt Park Alliance New Beginnings Picnic Logo"
-          />
-        <h1 class="title">New Beginnings Picnic</h1>
+      <div class="stage flex" id="featured-event">
+        <h1 class="title">Hike-toberfest 2019</h1>
         <div class="description">
-
-             <div>
-                 Join us on 
-                 <span class="bolder">Tuesday, June 11, 2019</span> 
-                 as we
-            </div>
-            <div>celebrate the launch of our new organization,</div>
-            <div>Van Cortlandt Park Alliance, at the New</div>
-            <div>Beginnings Picnic before the</div>
-            <div>New York Philharmonic Concert.</div>
+            <div>Hike, Eat and Drink during this fun fundraiser </div>
+            <div>for the Van Cortlandt Park Alliance. Come see </div>
+            <div>why VCP is where NYC hikes on Saturday, </div>
+            <div><span class="bolder">September 14, 2019</span> at 2:00 PM.</div>     
         </div>
-        <a class="link-stage" href="https://www.eventbrite.com/e/new-beginnings-picnic-tickets-59999990587" target="_blank">
-          More Info Here
+        <a href="https://www.eventbrite.com/e/hike-toberfest-2019-tickets-65205395092" target="_blank"></a>
+          <div class="link-stage">
+            
+              More Info Here
+            
+          </div> 
         </a>
-      </div> -->
-
+      </div> 
       <div class="stage flex" id="programming">
         <p class="title">
           Spring/Summer 2019 Programs
